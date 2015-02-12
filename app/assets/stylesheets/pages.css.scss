@@ -1,0 +1,21 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#main-nav {
+    a {
+        display: inline-block;
+        padding: 3px 7px;
+        color: #444;
+        text-decoration: none;
+        font-size: .7em;
+        text-transform:uppercase;
+    }
+}
+.page-header {
+    padding-right: 20px;
+}
+ul {
+    list-style: none;
+    list-style-position: inside;
+    margin: 0; padding: 0;
+}

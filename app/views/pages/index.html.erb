@@ -1,0 +1,43 @@
+<md-toolbar class="md-tall md-whiteframe-z2">
+    <span flex></span>
+    <h2 class="md-toolbar-tools md-toolbar-tools-bottom">Material Design App Sample</h2>
+</md-toolbar>
+<md-toolbar layout="row" layout-padding class="md-hue-3" layout-align="space-between center" id="main-nav">
+    <a href="#"><i class="fa fa-users"></i> Users</a>
+    <a href="#"><i class="fa fa-files-o"></i> Pages</a>
+    <span flex="70"></span>
+    <a href="#"><i class="fa fa-power-off"></i> Sign Out</a>
+</md-toolbar>
+<md-content ng-controller="UserController as UserCtrl" layout-padding>
+    <md-toolbar class="md-primary md-hue-2 page-header" layout="row" layout-align="space-around center">
+        <h3 class="md-toolbar-tools">Tasks List</h3>
+        <md-button arial-label="add user" class="md-primary md-hue-3" ng-click="UserCtrl.showTaskForm()"><i class="fa fa-plus"></i></md-button>
+    </md-toolbar>
+    <ul>
+      <li ng-repeat="item in UserCtrl.tasks" class='fx-fade-up fx-easing-bounce fx-speed-300'>
+        <div class="md-tile-content" layout="row" layout-align="space-between center">
+              <md-checkbox ng-model="UserCtrl.tasks[$index].completed" aria-label="{{ item.task }}">
+                {{ item.task }}
+              </md-checkbox>
+              <md-button aria-label="Delete" ng-click="UserCtrl.deleteTask($index,item.id,$event)"><i class="fa fa-trash-o"></i></md-button>
+          </div>
+        <md-divider ng-if="!$last"></md-divider>
+      </li>
+    </ul>
+</md-content>
+<script type="text/ng-template" id="AddTask.tmpl.html">
+    <md-dialog aria-label="Add Task">
+      <md-content>
+        <md-subheader class="md-sticky-no-effect">Add Task</md-subheader>
+        <md-input-container>
+            <label>Add Task</label>
+            <input type="text" ng-model="TaskForm.newTaskTxt">
+        </md-input-container>
+      </md-content>
+      <div class="md-actions" layout="row">
+        <md-button ng-click="TaskForm.createTask()">
+         Create Task
+        </md-button>
+      </div>
+    </md-dialog>
+</script>

@@ -1,0 +1,26 @@
+{
+  "name": "mdTechtalk",
+  "version": "0.0.1",
+  "authors": [
+    "Rijalul Fikri <fikri.desertlion@gmail.com>"
+  ],
+  "description": "App Made for Qiscus Techtalk on Material Design and AngularJs",
+  "keywords": [
+    "material",
+    "design",
+    "angular"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.3.0",
+    "ngFx": "~1.0.5"
+  }
+}
