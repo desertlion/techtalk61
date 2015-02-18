@@ -20,3 +20,19 @@
 //= require ngFx/dist/ngFx
 //= require main
 //= require_tree .
+(function(){
+    'use strict';
+
+    angular
+        .module('mdTechtalk')
+        .controller('TestController',TestController)
+
+    TestController.$inject = ['$timeout'];
+    function TestController($timeout){
+        var vm = this; // view model
+        vm.isLoading = true;
+        $timeout(function(){
+            vm.isLoading = false;
+        }, 3000);
+    }
+})()

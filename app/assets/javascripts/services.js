@@ -10,7 +10,7 @@
     function AjaxService($http, $q){
         return {
             AjaxGet: function(url, successFunction, errorFunction){
-                return $http.get(baseUrl+'tasks')
+                return $http.get(baseUrl+url)
                     .success(function(response, status, headers, config){
                         successFunction(response, status);
                     })
@@ -19,7 +19,7 @@
                     });
             },
             AjaxPost: function(url, data, successFunction, errorFunction){
-                return $http.post(url, data)
+                return $http.post(baseUrl+url, data)
                     .success(function(response, status, headers, config){
                         successFunction(response, status);
                     })
@@ -28,7 +28,7 @@
                     });
             },
             AjaxDelete: function(url, successFunction, errorFunction){
-                return $http.delete(url)
+                return $http.delete(baseUrl+url)
                     .success(function(response, status, headers, config){
                         successFunction(response, status);
                     })

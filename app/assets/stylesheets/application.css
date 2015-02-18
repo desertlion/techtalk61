@@ -15,3 +15,11 @@
  *= require_tree .
  *= require_self
  */
+#subheader a {
+    color: #444;
+    text-decoration: none;
+    margin-right: 10px;
+}
+#theContent {
+    margin: 10px; padding: 10px;
+}

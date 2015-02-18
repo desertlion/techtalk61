@@ -1,6 +1,25 @@
-<md-toolbar layout="row" layout-align="space-between center" layout-padding>
-    <h2 class="md-toolbar-tools">Just another test</h2>
-    <md-button>
-        <i class="fa fa-plus"></i> Add Task
-    </md-button>
+<md-toolbar class="md-primary" layout="row" layout-padding layout-align="start center">
+    <h2 class="md-toolbar-tools">Todolist App</h2>
+    <md-button><i class="fa fa-users"></i> Logout</md-button>
 </md-toolbar>
+<md-toolbar layout="row" layout-padding class="md-primary md-hue-3" layout-align="start center" id="subheader">
+    <a href="#">Home</a><a href="#">Tasks</a>
+</md-toolbar>
+<md-content ng-controller="TestController as TestCtrl" id="theContent">
+    <md-progress-linear md-mode="indeterminate" ng-if="TestCtrl.isLoading"></md-progress-linear>
+    {{ TestCtrl.content }}
+    <md-divider></md-divider>
+    <md-input-container>
+        <label>Type your username</label>
+        <input type="text" ng-model="TestCtrl.username">
+    </md-input-container>
+    <md-radio-group ng-model="data.group1">
+      <md-radio-button value="Apple">Apple</md-radio-button>
+      <md-radio-button value="Banana"> Banana </md-radio-button>
+      <md-radio-button value="Mango">Mango</md-radio-button>
+    </md-radio-group>
+    <md-switch ng-model="data.cb1" aria-label="Switch 1">
+    Switch 1: {{ data.cb1 }}
+  </md-switch><md-divider></md-divider>
+    <p>Welcome, {{ TestCtrl.username }}</p>
+</md-content>
