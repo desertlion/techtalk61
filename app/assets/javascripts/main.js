@@ -3,7 +3,8 @@
 
     angular
         .module('mdTechtalk',['ngMaterial','ngFx'])
-        .config(mdTechtalkConfig);
+        .config(mdTechtalkConfig)
+        .value('_', _);
 
     mdTechtalkConfig.$inject = ['$mdThemingProvider'];
     function mdTechtalkConfig($mdThemingProvider){

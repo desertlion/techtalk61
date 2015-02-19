@@ -13,26 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require lodash/lodash.min
 //= require angular/angular.min
 //= require angular-animate/angular-animate.min
 //= require angular-aria/angular-aria.min
 //= require angular-material/angular-material.min
 //= require ngFx/dist/ngFx
 //= require main
+//= require services
+//= require announcement/AnnouncementController
+//= require announcement/AnnouncementService
 //= require_tree .
-(function(){
-    'use strict';
-
-    angular
-        .module('mdTechtalk')
-        .controller('TestController',TestController)
-
-    TestController.$inject = ['$timeout'];
-    function TestController($timeout){
-        var vm = this; // view model
-        vm.isLoading = true;
-        $timeout(function(){
-            vm.isLoading = false;
-        }, 3000);
-    }
-})()

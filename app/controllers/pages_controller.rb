@@ -3,4 +3,6 @@ class PagesController < ApplicationController
   end
   def todolists
   end
+  def announcements
+  end
 end

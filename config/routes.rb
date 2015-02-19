@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
   get 'todolists' => 'pages#todolists'
+  get 'view/announcements' => 'pages#announcements'
+  resources :announcements
 
   resources :tasks
   # Example of regular route:
